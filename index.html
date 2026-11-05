@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis maratones — app personal de productividad</title>
+    <meta
+      name="description"
+      content="Mis maratones es una app personal de productividad en desarrollo para hábitos, bloques de tiempo y proyectos. Desarrollada por Ignacio Araneda (Chile)."
+    />
+    <meta name="theme-color" content="#F7F3EA" />
+    <link rel="icon" type="image/png" sizes="48x48" href="img/favicon-48.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <style>
+      @font-face {
+        font-family: 'Bricolage Grotesque';
+        font-weight: 700;
+        font-display: swap;
+        src: url('fonts/BricolageGrotesque-Bold.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Source Sans 3';
+        font-weight: 400;
+        font-display: swap;
+        src: url('fonts/SourceSans3-Regular.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Source Sans 3';
+        font-weight: 600;
+        font-display: swap;
+        src: url('fonts/SourceSans3-Semibold.woff2') format('woff2');
+      }
+      :root {
+        --cream: #f7f3ea;
+        --paper: #fbf8f1;
+        --ink: #14161b;
+        --muted: #5b554b;
+        --indigo: #4f46e5;
+        --tint: #eef0ff;
+        --hairline: #ece5d8;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font:
+          400 1.0625rem/1.6 'Source Sans 3',
+          system-ui,
+          -apple-system,
+          'Segoe UI',
+          sans-serif;
+      }
+      main,
+      header,
+      footer {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+      h1,
+      h2 {
+        font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      h1 {
+        font-size: clamp(2rem, 6vw, 2.75rem);
+        margin: 0.5rem 0 0.75rem;
+      }
+      h2 {
+        font-size: 1.375rem;
+        margin: 0 0 0.5rem;
+      }
+      a {
+        color: var(--indigo);
+      }
+      .hero {
+        background: var(--cream);
+        border-bottom: 1px solid var(--hairline);
+        padding: 2.5rem 0 2rem;
+      }
+      .hero header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      .hero img {
+        width: 120px;
+        height: 120px;
+      }
+      .hero header > div {
+        flex: 1 1 18rem;
+      }
+      .lead {
+        font-size: 1.1875rem;
+        color: var(--muted);
+        margin: 0;
+      }
+      .badge {
+        display: inline-block;
+        background: var(--tint);
+        color: var(--indigo);
+        font-weight: 600;
+        font-size: 0.9375rem;
+        border-radius: 999px;
+        padding: 0.125rem 0.75rem;
+      }
+      section {
+        background: #fff;
+        border: 1px solid var(--hairline);
+        border-radius: 16px;
+        padding: 1.25rem 1.5rem;
+        margin: 1.25rem 0;
+      }
+      ul {
+        padding-left: 1.25rem;
+        margin: 0.5rem 0 0;
+      }
+      li + li {
+        margin-top: 0.375rem;
+      }
+      dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 0.375rem 1rem;
+        margin: 0.5rem 0 0;
+      }
+      dt {
+        font-weight: 600;
+      }
+      dd {
+        margin: 0;
+      }
+      footer {
+        color: var(--muted);
+        font-size: 0.9375rem;
+        padding-top: 0.5rem;
+        padding-bottom: 2.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <header>
+        <img
+          src="img/logo-320.png"
+          srcset="img/logo-160.png 1x, img/logo-320.png 2x"
+          alt="Logo de Mis maratones"
+        />
+        <div>
+          <span class="badge">En desarrollo</span>
+          <h1>Mis maratones</h1>
+          <p class="lead">
+            Una app personal de productividad para avanzar en hábitos, bloques de tiempo y
+            proyectos.
+          </p>
+        </div>
+      </header>
+    </div>
+
+    <main>
+      <section>
+        <h2>Qué es</h2>
+        <p>
+          Mis maratones es una aplicación para Android, todavía en desarrollo, que ayuda a una
+          persona a organizar su propio día. No se vende ni está publicada en tiendas de
+          aplicaciones.
+        </p>
+        <ul>
+          <li>
+            <strong>Hábitos:</strong> registrar lo que se hizo cada día y seguir metas diarias y
+            semanales.
+          </li>
+          <li>
+            <strong>Plan:</strong> reservar bloques de tiempo en un calendario y recibir avisos en
+            el teléfono.
+          </li>
+          <li>
+            <strong>Proyectos:</strong> dividir un objetivo en etapas y acciones, con una vista de
+            cronograma.
+          </li>
+          <li><strong>Avance:</strong> ver el progreso de la semana y de cada proyecto.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Recordatorios por WhatsApp (en evaluación)</h2>
+        <p>
+          Estamos evaluando una función opcional que enviaría a la propia persona, por WhatsApp, un
+          resumen de su plan del día siguiente. Por ahora solo existe como prueba técnica con datos
+          ficticios, enviada únicamente al número verificado del desarrollador. No se envían
+          mensajes de marketing ni a terceros.
+        </p>
+      </section>
+
+      <section>
+        <h2>Privacidad</h2>
+        <p>
+          La app no requiere cuenta. Los hábitos, planes y proyectos se guardan en el propio
+          teléfono y no se envían a ningún servidor.
+        </p>
+      </section>
+
+      <section>
+        <h2>Responsable y contacto</h2>
+        <dl>
+          <dt>Desarrollador</dt>
+          <dd>Ignacio Araneda</dd>
+          <dt>País</dt>
+          <dd>Chile</dd>
+          <dt>Soporte de Mis maratones</dt>
+          <dd><a href="mailto:iarplaystudio@gmail.com">iarplaystudio@gmail.com</a></dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Ignacio Araneda · Mis maratones · Última actualización: 5 de noviembre de 2026.</p>
+    </footer>
+  </body>
+</html>
